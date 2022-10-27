@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+h1 {
+    background-color: aliceblue;
+    height: 5rem;
+}
+
+a {
+    display: inline-block;
+    background-color: burlywood;
+    height: 10rem;
+    width: 50rem;
+    margin: 2rem;
+    padding: 1.5rem;
+
+    text-align: center;
+
+}
+
+/*
+    <!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <meta name="robots" content="index,follow">
+        <meta name="Description" content="Text size formatting.">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <h1>HELLO</h1>
+        <p>Pee tag</p>
+        <a href="#"> Link to website!</a>
+        <a href="#"> Link to website!</a>
+    </body>
+
+</html>    
+*/

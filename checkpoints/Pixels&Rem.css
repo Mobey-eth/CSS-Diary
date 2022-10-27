@@ -1,0 +1,16 @@
+/*  
+    In css , 1em = 16 px ... 
+    html automatically sets font size to 16px by default
+*/
+html {
+    font-size: 62.5%;
+}
+
+.text-section {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.text-section div {
+    font-size: 2.5rem;
+}

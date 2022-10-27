@@ -1,0 +1,28 @@
+/*
+    h1 {
+    margin: 50px;
+    background-color: crimson;
+}
+
+*/
+
+button {
+    /*  padding: 50px 20px;
+        first value is applied to top and bottom
+        second value is applied to left and right.*/
+
+    /*
+        Alt method:
+            padding-top: 10px;
+            padding-left: 20px;
+            padding-bottom: 50px;
+            padding-right: 0px;
+    */
+
+    /* Applied in a clockwise direction*/
+    padding: 50px 20px 10px 0px;
+    background-color: crimson;
+
+
+
+}

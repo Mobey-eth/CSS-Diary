@@ -1,0 +1,46 @@
+/* */
+
+h1 {
+    color: crimson;
+}
+
+/* To set a background color */
+body {
+    background-color: grey;
+}
+
+/* .story h3 || h3.story 
+    to look into the story tag and style the h3 element */
+.story h3 {
+    color: rebeccapurple;
+}
+
+/* working with ID's --  highest specificity */
+#twitter-link {
+    color: burlywood;
+}
+
+* {
+    font-size: 20px;
+}
+
+/* use "+" to get the element below a class */
+.my-list+ul {
+    list-style: none;
+}
+
+/* Walk down a ul and style the lists */
+ul>li {
+    color: fuchsia;
+    font-size: 23px;
+}
+
+/* Higher specificity! */
+.ul-tests li {
+    color: aquamarine;
+}
+
+/* to style the a tag in a list if there multiple a tags in a class. */
+.ul-tests li a {
+    color: rgb(114, 146, 135);
+}

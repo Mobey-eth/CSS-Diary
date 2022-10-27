@@ -1,0 +1,50 @@
+/* css specificity */
+/* If the style is directly applied to the element on the html,
+    it has higher specificity than anything n the style sheet. */
+
+#head {
+    color: aqua;
+    /* IDs have a higher css specificity */
+}
+
+h1.header {
+    color: blueviolet;
+}
+
+h1 {
+    color: blue;
+}
+
+h1 {
+    color: coral;
+    /* Styling below is ranked higher*/
+}
+
+.header {
+    color: burlywood;
+    /* classes have a higher specificity */
+}
+
+h1 {
+    color: coral !important;
+    /* The Override button, not recommended! */
+}
+
+
+
+
+
+
+/* ---------------------------------------------- */
+
+/* How ordering works in css... */
+
+/* if there are multiple lists in the "links" class... */
+.links:nth-child(1) {
+    color: rgb(121, 69, 243);
+}
+
+/* To go for the specific element */
+.links li:nth-child(3) {
+    color: crimson;
+}

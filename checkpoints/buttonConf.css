@@ -1,0 +1,38 @@
+/*  
+    In css , 1em = 16 px ... 
+    html automatically sets font size to 16px by default
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* 1 rem  = 10px */
+}
+
+button {
+    margin: 10rem;
+    padding: 2rem 4rem;
+    background: none;
+    border: 0.3rem double burlywood;
+    color: white;
+    border-radius: 0.5rem;
+    /* To make it a full circle, set the border radius to 50% 
+        and adjust width & hieght. */
+    border-bottom-style: groove;
+    font-size: 2.4rem;
+    background-color: burlywood;
+
+}
+
+button:hover {
+    background: bisque;
+    padding: 2rem 6rem;
+    cursor: pointer;
+}
+
+button:focus {
+    background: #b44242af;
+}
