@@ -97,9 +97,9 @@ section {
         font-size: 1.6em;
         border-radius: 4rem;
         font-weight: bold;
-        display: block;
+        display: inline-block;
         width: 15.1rem;
-        margin: 0rem auto 0rem auto;
+        //margin: 0rem auto 0rem auto; only works on a block
 
         &:hover {
             background: rgb(245, 204, 155);
@@ -137,6 +137,9 @@ section {
     padding-bottom: 4rem;
 
     .container ul {
+        // investigate
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
 
         li {
             box-sizing: border-box;
@@ -249,6 +252,7 @@ input[type="submit"] {
 }
 
 // to build out our nav component.
+// we comment out our initial nav value
 
 nav.menu-btn {
     display: block; // we set this on script
@@ -307,7 +311,7 @@ nav {
 
 // To make the frontend responsive
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 740px) {
 
     .mobile-menu {
         display: none;
@@ -319,14 +323,14 @@ nav {
 
     .navbar .container {
         display: grid;
-        grid-template-columns: 180px auto;
+        grid-template-columns: 180px auto; // wtf happened here?
 
         .logo {
-            font-size: 2.5rem;
+            font-size: 2.4rem;
 
             span {
 
-                font-size: 2.7rem;
+                font-size: 2.6rem;
 
                 &:hover {
                     color: burlywood;
@@ -342,7 +346,7 @@ nav {
     .navbar nav {
         display: flex;
         justify-content: space-between;
-        background: none;
+        background: none; // to remove the grey
         position: unset; // because its currently fixed
         height: auto;
         width: 100%;
@@ -354,16 +358,161 @@ nav {
 
         a {
             color: black;
-            font-size: 1rem;
+            font-size: 1.2rem;
+            //font-weight: bold;
             padding: .1rem 1rem;
+        }
+
+        ul.primary-nav {
+            margin-top: 0;
+            margin-right: 2rem;
+        }
+
+        .go-premium-cta a {
+            border: .3rem solid var(--primary-color);
+            padding: .3rem 1rem;
+            margin: 0.45rem .5rem 0 0.3rem;
+            border-radius: 3rem;
+            color: var(--primary-color);
+
+            &:hover {
+                color: white;
+                background: var(--primary-color);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .container {
+        width: 900px;
+        margin: 0 auto;
+    }
+
+    section {
+        padding: 10rem, 4rem;
+    }
+
+    .hero .container {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+
+        //align-items: center;
+        .left-col {
+            margin: 3rem 3rem 0 5rem; // aligning the col with margin.
+
+            h1 {
+                width: 80%;
+            }
+
+            .hero-cta {
+                display: flex;
+
+                .primary-cta {
+
+                    width: unset;
+                    height: 2rem;
+                    margin-right: 3rem;
+                }
+
+                .watch-video-cta {
+                    // 1.a
+                    display: flex;
+                    margin-top: 0rem;
+
+                    img {
+                        margin-right: 1rem;
+                    }
+                }
+            }
+
+
+        }
+
+        .hero-img {
+            width: 30%;
+            margin-right: 8rem;
         }
     }
 
+    #lists-id {
+        display: block;
+        margin-left: 5rem;
 
+        li {
+            font-size: 1.2rem;
+
+            &:before {
+                width: 26px;
+                height: 26px;
+                background-size: contain;
+                //margin-right: 3rem;
+                left: -2.5rem;
+                top: .5rem;
+            }
+        }
+    }
+
+    .features-section {
+        position: relative;
+
+        img {
+            position: absolute;
+            display: block;
+            width: 250px;
+            bottom: -2rem;
+            right: 0rem;
+        }
+    }
+
+    .testimonials-section ul {
+        display: flex;
+
+        li {
+            padding-top: 3rem;
+            margin: 0 1rem;
+            font-size: 1.5rem; //using font to increase hieght
+        }
+    }
+
+    .contact-left {
+        width: 70%;
+
+        input,
+        textarea {
+            width: 70%;
+
+        }
+    }
 
 }
 
+@media only screen and (min-width: 1080px) {
 
+    .features-section {
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 10%;
+            height: 20rem;
+            background: var(--primary-color);
+            left: 0;
+            top: -4em;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 160px;
+            height: 15rem;
+            background: url('./images/dots.svg') no-repeat;
+            left: 4.5rem;
+            top: 2rem;
+        }
+    }
+}
 
 
 
@@ -382,6 +531,20 @@ nav {
 // -------------------------------------------------------------
 /*
     
+1.a{
+                //display: block; method 1, but items != aligned.
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+
+                img {
+                    margin-right: 1.5rem;
+                    margin-top: -.7rem;
+                }
+}
+---------------------
+
 .hero {
     .container {
         display: flex;
