@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+[class ^="box-"] {
+    display: grid;
+    place-items: center; // only works on grid
+    border: 5px solid rgb(231, 116, 74);
+    padding: 10px;
+    margin: 10px;
+    font-size: 3rem;
+    border-radius: 20px;
+    // box shadow contains x&y values -investigate
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+}
+
+main {
+    min-height: 100vh;
+    padding: 1rem 3rem;
+    color: #444444;
+    background: linear-gradient(to right top, #426696, #9db6da);
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 1rem;
+
+        h2 {
+            font-size: 2.5rem;
+
+        }
+
+        ul {
+            display: flex;
+            margin-top: 1rem;
+            //margin-right: 2rem;
+
+            li {
+                margin: 0 1rem 0 2rem;
+                list-style: none;
+                font-size: 1.6rem;
+
+            }
+        }
+    }
+
+}
+
+.beginner {
+    height: 80vh;
+    width: 90%;
+    margin: 2rem auto;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto; //for the rows
+    gap: 1rem;
+}
